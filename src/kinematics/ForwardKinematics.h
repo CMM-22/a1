@@ -1,4 +1,4 @@
-﻿#include "Linkage.h"
+#include "Linkage.h"
 
 using Eigen::Vector2d;
 using Eigen::Matrix2d;
@@ -7,6 +7,10 @@ typedef std::array<Matrix2d, 2> Tensor2x2x2;
 /* Returns the 3 points {p0, p1, p2} of the linkage
  * given two angles {a0, a1}
  * Note: p0 is given by the Linkage
+ * ------> x
+ * |
+ * |
+ * v y
  *
  *                  o < p2 = end-effector position
  *                 /
