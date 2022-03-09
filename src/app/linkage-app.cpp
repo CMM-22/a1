@@ -117,6 +117,9 @@ public:
             // do IK
             if(ikOn && !settingAlpha){
                 VectorXd x = angles;
+                if (currentMethod == RANDOM) {
+                    resetMethods(x);
+                }
                 angles = inverseKinematics(linkage, target, angles, methods[currentMethod].method);
                 //                for(auto &a : angles)
                 //                    if(a > M_PI) a -= 2*M_PI;
